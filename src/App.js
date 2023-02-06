@@ -6,7 +6,7 @@ import { AddJob, AllJobs, Stats, SharedLayout, Profile } from './pages/dashboard
 
 function App() {
 	return (
-		<HashRouter>
+		<HashRouter basename='/'>
 			<Routes>
 				<Route
 					path='/'
