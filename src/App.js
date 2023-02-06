@@ -1,12 +1,12 @@
 import { Landing, Register, Error, ProtectedRoute } from './pages/';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AddJob, AllJobs, Stats, SharedLayout, Profile } from './pages/dashboard';
 
 function App() {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
 				<Route
 					path='/'
@@ -26,7 +26,7 @@ function App() {
 				<Route path='*' element={<Error />} />
 			</Routes>
 			<ToastContainer position='top-center' />
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
