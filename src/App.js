@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { Landing, Register, Error, ProtectedRoute } from './pages/';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AddJob, AllJobs, Stats, SharedLayout, Profile } from './pages/dashboard';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path='/'
+					element={
+						<ProtectedRoute>
+							<SharedLayout />
+						</ProtectedRoute>
+					}
+				>
+					<Route index element={<Stats />} />
+					<Route path='all-jobs' element={<AllJobs />} />
+					<Route path='add-job' element={<AddJob />} />
+					<Route path='Profile' element={<Profile />} />
+				</Route>
+				<Route path='/landing' element={<Landing />} />
+				<Route path='register' element={<Register />} />
+				<Route path='*' element={<Error />} />
+			</Routes>
+			<ToastContainer position='top-center' />
+		</BrowserRouter>
+	);
 }
 
 export default App;
+
+// TODO
+// css modules: https://dev.to/myogeshchavan97/an-introduction-to-css-modules-in-react-2fkd
+// createSlice has a name, and configureStore have the same property, where are they used?
+// clear search form input if navigate to other pages
+
+// deploy to github pages
+// https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
