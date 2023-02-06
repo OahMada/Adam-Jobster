@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/OahMada/Adam-Jobster/static/css/main.ef0d92df.css",
-    "main.js": "/OahMada/Adam-Jobster/static/js/main.ab4824b0.js",
+    "main.js": "/OahMada/Adam-Jobster/static/js/main.f893f5de.js",
     "static/media/main.svg": "/OahMada/Adam-Jobster/static/media/main.17b316de742b3a1202078c5ae18c8261.svg",
     "static/media/not-found.svg": "/OahMada/Adam-Jobster/static/media/not-found.5cfa24fa5e3ca7dffe02f358358ea9df.svg",
     "static/media/logo.svg": "/OahMada/Adam-Jobster/static/media/logo.35bb8e1d9b5745af32ff148cbee51dfa.svg",
     "index.html": "/OahMada/Adam-Jobster/index.html",
     "main.ef0d92df.css.map": "/OahMada/Adam-Jobster/static/css/main.ef0d92df.css.map",
-    "main.ab4824b0.js.map": "/OahMada/Adam-Jobster/static/js/main.ab4824b0.js.map"
+    "main.f893f5de.js.map": "/OahMada/Adam-Jobster/static/js/main.f893f5de.js.map"
   },
   "entrypoints": [
     "static/css/main.ef0d92df.css",
-    "static/js/main.ab4824b0.js"
+    "static/js/main.f893f5de.js"
   ]
 }
