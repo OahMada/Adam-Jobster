@@ -6,27 +6,28 @@ import { AddJob, AllJobs, Stats, SharedLayout, Profile } from './pages/dashboard
 
 function App() {
 	return (
-		<HashRouter basename='/'>
-			<Routes>
-				<Route
-					path='/'
-					element={
-						<ProtectedRoute>
-							<SharedLayout />
-						</ProtectedRoute>
-					}
-				>
-					<Route index element={<Stats />} />
-					<Route path='all-jobs' element={<AllJobs />} />
-					<Route path='add-job' element={<AddJob />} />
-					<Route path='Profile' element={<Profile />} />
-				</Route>
-				<Route path='/landing' element={<Landing />} />
-				<Route path='register' element={<Register />} />
-				<Route path='*' element={<Error />} />
-			</Routes>
-			<ToastContainer position='top-center' />
-		</HashRouter>
+		<Register />
+		// <HashRouter basename='/'>
+		// 	<Routes>
+		// 		<Route
+		// 			path='/'
+		// 			element={
+		// 				<ProtectedRoute>
+		// 					<SharedLayout />
+		// 				</ProtectedRoute>
+		// 			}
+		// 		>
+		// 			<Route index element={<Stats />} />
+		// 			<Route path='all-jobs' element={<AllJobs />} />
+		// 			<Route path='add-job' element={<AddJob />} />
+		// 			<Route path='Profile' element={<Profile />} />
+		// 		</Route>
+		// 		<Route path='/landing' element={<Landing />} />
+		// 		<Route path='register' element={<Register />} />
+		// 		<Route path='*' element={<Error />} />
+		// 	</Routes>
+		// 	<ToastContainer position='top-center' />
+		// </HashRouter>
 	);
 }
 
