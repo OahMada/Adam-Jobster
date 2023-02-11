@@ -1,7 +1,7 @@
 {
 	"name": "jobster",
 	"version": "0.1.0",
-	"homepage": "https://github.com/OahMada/Adam-Jobster",
+	"homepage": "https://oahmada.github.io/Adam-Jobster",
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.9.1",
 		"@testing-library/jest-dom": "^5.16.5",
