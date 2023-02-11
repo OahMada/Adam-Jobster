@@ -1,9 +1,9 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { FormRow } from '../../components/';
 import { useDispatch, useSelector } from 'react-redux';
 import Wrapper from '../../assets/wrappers/DashboardFormPage';
 import { toast } from 'react-toastify';
-import { updateUser } from '../../features/user/userSlice';
+import { updateUser, handleUserChange } from '../../features/user/userSlice';
 import { handleChange as handleJobChange } from '../../features/job/jobSlice';
 import { addUserToLocalStorage } from '../../utils/localStorage';
 
@@ -11,16 +11,9 @@ const Profile = () => {
 	let { isLoading, user } = useSelector((store) => store.user);
 	let dispatch = useDispatch();
 
-	let [userData, setUserData] = useState({
-		name: user?.name || '',
-		email: user?.email || '',
-		lastName: user?.lastName || '',
-		location: user?.location || '',
-	});
-
 	let handleSubmit = async (e) => {
 		e.preventDefault();
-		let { name, email, lastName, location } = userData;
+		let { name, email, lastName, location } = user;
 		if (!name || !email || !lastName || !location) {
 			toast.error('please fill out all fields');
 		}
@@ -53,23 +46,23 @@ const Profile = () => {
 	let handleChange = (e) => {
 		let name = e.target.name;
 		let value = e.target.value;
-		setUserData({ ...userData, [name]: value });
+		dispatch(handleUserChange({ name, value }));
 	};
 	return (
 		<Wrapper>
 			<form className='form' onSubmit={handleSubmit}>
 				<h3>profile</h3>
 				<div className='form-center'>
-					<FormRow type='text' name='name' value={userData.name} handleChange={handleChange} />
+					<FormRow type='text' name='name' value={user.name} handleChange={handleChange} />
 					<FormRow
 						type='text'
 						labelText='last name'
 						name='lastName'
-						value={userData.lastName}
+						value={user.lastName}
 						handleChange={handleChange}
 					/>
-					<FormRow type='email' name='email' value={userData.email} handleChange={handleChange} />
-					<FormRow type='text' name='location' value={userData.location} handleChange={handleChange} />
+					<FormRow type='email' name='email' value={user.email} handleChange={handleChange} />
+					<FormRow type='text' name='location' value={user.location} handleChange={handleChange} />
 					<button type='submit' className='btn btn-block' disabled={isLoading}>
 						{isLoading ? 'please wait...' : 'save changes'}
 					</button>
@@ -81,5 +74,4 @@ const Profile = () => {
 
 export default Profile;
 
-// TODO
-// update slice state right away?
+// done update slice state right away?

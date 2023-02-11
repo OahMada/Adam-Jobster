@@ -39,6 +39,9 @@ export var userSlice = createSlice({
 			state.user = null;
 			state.isSidebarOpen = false;
 		},
+		handleUserChange: (state, { payload }) => {
+			state.user[payload.name] = payload.value;
+		},
 	},
 	extraReducers: (builder) => {
 		builder
@@ -80,4 +83,4 @@ export var userSlice = createSlice({
 });
 
 export default userSlice.reducer;
-export var { toggleSidebar, logoutUser } = userSlice.actions;
+export var { toggleSidebar, logoutUser, handleUserChange } = userSlice.actions;

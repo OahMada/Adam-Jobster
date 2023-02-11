@@ -127,8 +127,6 @@ var AddJob = () => {
 
 export default AddJob;
 
-// TODO
-// why no useState?
 // 594 Q&A No.3 create job request complete: Nah
 // done dispatch action in reducer https://stackoverflow.com/questions/36730793/can-i-dispatch-an-action-in-reducer replace the useEffect => use redux-thunk middleware
 // done access another slice in one slice => use redux-thunk middle

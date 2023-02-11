@@ -32,7 +32,6 @@ function App() {
 
 export default App;
 
-// TODO
 // done css modules: https://dev.to/myogeshchavan97/an-introduction-to-css-modules-in-react-2fkd
 
 // done createSlice has a name, and configureStore have the same property, where are they used?
