@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Job from './Job';
 import Wrapper from '../assets/wrappers/JobsContainer';
 import Loading from './Loading';
-import { getAllJobs } from '../features/allJobs/allJobsSlice';
+import { getAllJobs, clearAllJobsStateValues } from '../features/allJobs/allJobsSlice';
 import { toast } from 'react-toastify';
 import PageBtnContainer from './PageBtnContainer';
 
@@ -44,6 +44,12 @@ const JobsContainer = () => {
 		// 	resultPromise.abort();
 		// };
 	}, [search, searchStatus, searchType, sort, page, dispatch]);
+
+	useEffect(() => {
+		return () => {
+			dispatch(clearAllJobsStateValues());
+		};
+	}, [dispatch]);
 
 	// about add dispatch to dependency array https://stackoverflow.com/questions/67012223/is-safe-to-insert-dispatch-function-as-a-dependency-in-useeffect-function
 

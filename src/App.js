@@ -33,9 +33,14 @@ function App() {
 export default App;
 
 // TODO
-// css modules: https://dev.to/myogeshchavan97/an-introduction-to-css-modules-in-react-2fkd
-// createSlice has a name, and configureStore have the same property, where are they used?
-// clear search form input if navigate to other pages
+// done css modules: https://dev.to/myogeshchavan97/an-introduction-to-css-modules-in-react-2fkd
 
-// deploy to github pages
-// https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+// done createSlice has a name, and configureStore have the same property, where are they used?
+// https://redux-toolkit.js.org/api/createSlice#name
+// The state produced by combineReducers() namespaces the states of each reducer under their keys as passed to combineReducers() https://redux.js.org/api/combinereducers
+
+// done clear search form input if navigate to other pages
+
+// done deploy to github pages
+// https://medium.com/@bennirus/deploying-a-create-react-app-with-routing-to-github-pages-f386b6ce84c2
+// https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
